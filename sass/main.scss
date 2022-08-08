@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap");
+// COSTUMIZED COLORS
+$primary: #242132;
+$secondary: #746cfe;
+$success: #ae8cfa;
+$light: #646465;
+$info: white;
+
+$navbar-toggler-font-size: 1.7rem;
+$btn-padding-y-lg: 1rem;
+$btn-padding-x-lg: 2rem;
+
+$carousel-control-width: 400px;
+
+$display-font-family: "Yanone Kaffeesatz", sans-serif;
+$font-family-sans-serif: "Yanone Kaffeesatz", sans-serif;
+
+$carousel-control-color: black;
+$carousel-control-hover-opacity: 1;
+
+$box-shadow: 0 0.5rem 1rem rgba(black, 0.5);
+
+.menu {
+  background: linear-gradient(to right, rgba($success, 1), rgba($secondary, 1));
+}
+
+.vr1 {
+  display: inline-block;
+  align-self: stretch;
+  width: 1px;
+  min-height: 1em;
+  background-color: currentColor;
+  opacity: 1;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
