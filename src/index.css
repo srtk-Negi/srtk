@@ -1,9 +1,18 @@
+#root {
+  font-family: "Courier New", Courier, monospace;
+}
+
 header {
   display: flex;
   justify-content: space-around;
   border: 5px solid black;
   align-items: center;
   max-height: 100px;
+}
+
+.navLinksContainer {
+  display: flex;
+  justify-content: space-around;
 }
 
 .logo {

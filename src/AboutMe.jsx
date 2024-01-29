@@ -1,18 +1,32 @@
 export default function AboutMe() {
   return (
     <div id="aboutMe">
-      <h1>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero excepturi
-        beatae minima fugiat accusamus odit itaque minus sit, cumque a saepe
-        necessitatibus dolorum modi consectetur nobis omnis in provident
-        possimus.
-      </h1>
-      <h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est
-        minus amet, sapiente incidunt hic laborum tempore dolor maxime,
-        accusamus sequi libero dicta cumque labore molestias veritatis unde.
-        Aperiam, quis.
-      </h1>
+      <div id="intro">
+        <h1>
+          👋 Hi there! I'm Sarthak, a junior at UTSA pursuing a major in
+          Computer Science with a concentration in Software Engineering and Data
+          Science.
+        </h1>
+        <h2>
+          I am actively looking for Internship opportunities for Summer 2024. 💻
+          Currently, I am working as a Research Assistant at the Data Analytics
+          Center, where I actively contribute to collecting data and managing
+          databases for projects in production. I specialize in working with
+          LLMs (Large Language Models) and excel at collecting and preparing
+          data for various modeling tasks. 🤝 I thrive in collaborative
+          environments and thoroughly enjoy being part of a team. I am always
+          ready to take on higher responsibilities and contribute to the success
+          of a project. 🌟 Passionate and eager to learn, I actively seek out
+          opportunities to acquire new skills and knowledge. I strongly believe
+          in applying my learnings to my work and making a tangible impact. Feel
+          free to contact me through LinkedIn, email or my portfolio.
+        </h2>
+      </div>
+      <div id="socials">
+        <div>Linkedin</div>
+        <div>Twitter</div>
+        <div>Github</div>
+      </div>
     </div>
   );
 }

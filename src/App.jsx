@@ -12,8 +12,8 @@ function App() {
       <AboutMe />
       <Projects />
       <Resume />
-      <Footer />
       <ContactMe />
+      <Footer />
     </>
   );
 }
