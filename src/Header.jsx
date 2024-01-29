@@ -12,15 +12,17 @@ function NavElement() {
       <h2>
         <a href="#resume">Resume</a>
       </h2>
+      <h2>
+        <a href="#contactMe">Contact Me</a>
+      </h2>
     </>
   );
 }
+
 export default function Header() {
   return (
     <header id="header">
-      <div className="logo">
-        <img src={logoImage} alt="Logo Image" />
-      </div>
+      <img className="logo" src={logoImage} alt="Logo Image" />
       <NavElement />
     </header>
   );
