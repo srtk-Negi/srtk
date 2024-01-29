@@ -2,6 +2,8 @@ import Header from "./Header";
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
 import Resume from "./Resume";
+import Footer from "./Footer";
+import ContactMe from "./ContactMe";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <AboutMe />
       <Projects />
       <Resume />
+      <Footer />
+      <ContactMe />
     </>
   );
 }
