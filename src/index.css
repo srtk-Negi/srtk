@@ -1,54 +1,54 @@
 #root {
-  font-family: "Courier New", Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
 }
 
 header {
-  display: flex;
-  justify-content: space-around;
-  border: 5px solid black;
-  align-items: center;
-  max-height: 100px;
+    display: flex;
+    justify-content: space-around;
+    border: 5px solid black;
+    align-items: center;
+    max-height: 100px;
 }
 
 .navLinksContainer {
-  display: flex;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
 
 .navLinksContainer a {
-  margin: 50px;
+    margin: 50px;
 }
 
 .logo {
-  height: 70px;
+    height: 70px;
 }
 
 #aboutMe {
-  display: flex;
-  height: 100vh;
-  border: 5px solid black;
+    display: flex;
+    height: 100vh;
+    border: 5px solid black;
 }
 
 #projects {
-  height: 100vh;
-  display: flex;
-  border: 5px solid black;
+    height: 100vh;
+    display: flex;
+    border: 5px solid black;
 }
 
 #resume {
-  display: flex;
-  height: 100vh;
-  border: 5px solid black;
+    display: flex;
+    height: 100vh;
+    border: 5px solid black;
 }
 
 #footer {
-  display: flex;
-  height: 100vh;
-  border: 5px solid black;
+    display: flex;
+    height: 100vh;
+    border: 5px solid black;
 }
 
 #contactMe {
-  display: flex;
-  height: 100vh;
-  border: 5px solid black;
+    display: flex;
+    height: 100vh;
+    border: 5px solid black;
 }

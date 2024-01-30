@@ -4,18 +4,14 @@ import Projects from "./Projects";
 import Resume from "./Resume";
 import Footer from "./Footer";
 import ContactMe from "./ContactMe";
+import Test from "./Test";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <AboutMe />
-      <Projects />
-      <Resume />
-      <ContactMe />
-      <Footer />
-    </>
-  );
+    return (
+        <>
+            <Test />
+        </>
+    );
 }
 
 export default App;
