@@ -1,30 +1,51 @@
 import { useState } from "react";
 
 export default function Test() {
-    const [foods, setFoods] = useState(["Apple", "orange"]);
+    const [cars, setCars] = useState([]);
+    const [carYear, setCarYear] = useState(new Date().getFullYear());
+    const [carMake, setCarMake] = useState("");
+    const [carModel, setCarModel] = useState("");
 
-    function addFood() {
-        const newFood = document.getElementById("foodname").value;
-        document.getElementById("foodname").value = "";
-        setFoods((f) => [...f, newFood]);
+    function handleYearChange(event) {
+        setCarYear(event.target.value);
     }
 
-    function removeFood(index) {
-        setFoods(foods.filter((_, i) => i !== index));
+    function handleMakeChange(event) {
+        setCarMake(event.target.value);
+    }
+    function handleModelChange(event) {
+        setCarModel(event.target.value);
+    }
+    function addCar() {
+        const newCar = { year: carYear, make: carMake, model: carModel };
+
+        setCars((c) => [...c, newCar]);
+        setCarMake("");
+        setCarModel("");
+        setCarYear(new Date().getFullYear());
+    }
+
+    function removeCar(index) {
+        setCars(cars.filter((_, i) => i !== index));
     }
 
     return (
         <div>
-            <h1>List of foods</h1>
+            <h2>List of car objects</h2>
             <ul>
-                {foods.map((food, index) => (
-                    <li key={index} onClick={() => removeFood(index)}>
-                        {food}
+                {cars.map((car, index) => (
+                    <li key={index} onClick={() => removeCar(index)}>
+                        {car.year} {car.make} {car.model}
                     </li>
                 ))}
             </ul>
-            <input type="text" id="foodname" />
-            <button onClick={addFood}>Submit</button>
+            <input type="number" value={carYear} onChange={handleYearChange} />
+            <br />
+            <input type="text" value={carMake} onChange={handleMakeChange} />
+            <br />
+            <input type="text" value={carModel} onChange={handleModelChange} />
+            <br />
+            <button onClick={addCar}>Add Car</button>
         </div>
     );
 }
