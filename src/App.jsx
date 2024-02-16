@@ -1,4 +1,8 @@
 // Code: Main App component
+import React from "react";
+
+// Importing PrimeReact components
+import { PrimeReactProvider } from "primereact/api";
 
 // Importing components
 import Header from "./Components/Header";
@@ -7,7 +11,6 @@ import Projects from "./Components/Projects";
 import Resume from "./Components/Resume";
 import Footer from "./Components/Footer";
 import ContactMe from "./Components/ContactMe";
-import React from "react";
 
 // Importing styles
 import "./scss/header.scss";
@@ -19,14 +22,16 @@ import "./scss/contactMe.scss";
 
 function App() {
     return (
-        <div>
-            <Header />
-            <AboutMe />
-            <Projects />
-            <Resume />
-            <ContactMe />
-            <Footer />
-        </div>
+        <PrimeReactProvider>
+            <div className="app">
+                <Header />
+                <AboutMe />
+                <Projects />
+                <Resume />
+                <ContactMe />
+                <Footer />
+            </div>
+        </PrimeReactProvider>
     );
 }
 
