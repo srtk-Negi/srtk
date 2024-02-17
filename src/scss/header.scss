@@ -1,28 +1,22 @@
-// @import "variables";
+@import "variables";
 
-// #navbar {
-//     display: flex;
-//     justify-content: space-around;
-//     align-items: center;
-//     background-color: $navbar-color;
-// }
+#header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: $navbar-color;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
+}
 
-// .navLinksContainer {
-//     display: flex;
-//     justify-content: space-around;
-//     font-size: 20px;
-// }
-
-// .navLinksContainer a {
-//     margin: 50px;
-//     text-decoration: none;
-//     color: black;
-// }
-
-// .navLinksContainer a:hover {
-//     color: #f5f5f5;
-// }
-
-// .logo {
-//     height: 70px;
-// }
+.nav-elements {
+    font-size: 2rem;
+    text-decoration: none;
+    color: $nav-elements-color;
+    &:hover {
+        color: $nav-elements-color_hover;
+    }
+}

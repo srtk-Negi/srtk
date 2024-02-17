@@ -1,4 +1,7 @@
+@import "variables.scss";
+
 #aboutMe {
     display: flex;
     height: 100vh;
+    background-color: $primary-grey;
 }

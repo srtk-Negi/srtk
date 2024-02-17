@@ -3,6 +3,10 @@ import React from "react";
 
 // Importing PrimeReact components
 import { PrimeReactProvider } from "primereact/api";
+import "primereact/resources/themes/lara-light-cyan/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
+import "primeflex/primeflex.css";
 
 // Importing components
 import Header from "./Components/Header";
@@ -20,7 +24,7 @@ import "./scss/resume.scss";
 import "./scss/footer.scss";
 import "./scss/contactMe.scss";
 
-function App() {
+export default function App() {
     return (
         <PrimeReactProvider>
             <div className="app">
@@ -34,5 +38,3 @@ function App() {
         </PrimeReactProvider>
     );
 }
-
-export default App;
