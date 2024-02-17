@@ -1,5 +1,6 @@
 // Code: Main App component
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // Importing PrimeReact components
 import { PrimeReactProvider } from "primereact/api";
@@ -10,6 +11,7 @@ import "primeflex/primeflex.css";
 
 // Importing components
 import Header from "./Components/Header";
+import Home from "./Components/Home";
 import AboutMe from "./Components/AboutMe";
 import Projects from "./Components/Projects";
 import Resume from "./Components/Resume";
@@ -28,12 +30,18 @@ export default function App() {
     return (
         <PrimeReactProvider>
             <div className="app">
-                <Header />
-                <AboutMe />
-                <Projects />
-                <Resume />
-                <ContactMe />
-                <Footer />
+                <Router>
+                    <Header />
+                    <Routes>
+                        <Route path="/" Component={AboutMe} />
+                        <Route path="/home" Component={Home} />
+                        <Route path="/aboutMe" Component={AboutMe} />
+                        <Route path="/projects" Component={Projects} />
+                        <Route path="/resume" Component={Resume} />
+                        <Route path="/contact" Component={ContactMe} />
+                    </Routes>
+                    <Footer />
+                </Router>
             </div>
         </PrimeReactProvider>
     );
