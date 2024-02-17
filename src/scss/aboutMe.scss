@@ -4,5 +4,19 @@
     padding-top: 20rem;
     display: flex;
     height: 100vh;
-    background-color: $primary-grey;
+    background-color: $background-color;
+}
+
+.aboutMe h1 {
+    color: $main-text;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.aboutMe h2 {
+    color: $normal-text;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
 }

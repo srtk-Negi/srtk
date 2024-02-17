@@ -13,9 +13,18 @@
 }
 
 .nav-elements {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-decoration: none;
-    color: $nav-elements-color;
+    color: $main-text;
+    &:hover {
+        color: $nav-elements-color_hover;
+    }
+}
+
+.username {
+    font-size: 2rem;
+    color: $main-text;
+    text-decoration: none;
     &:hover {
         color: $nav-elements-color_hover;
     }

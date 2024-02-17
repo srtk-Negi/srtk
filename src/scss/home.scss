@@ -4,5 +4,8 @@
     padding-top: 20rem;
     display: flex;
     height: 100vh;
-    background-color: $primary-grey;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-color;
+    color: $main-text;
 }
