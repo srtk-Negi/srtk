@@ -1,39 +1,45 @@
 import React from "react";
 import { Avatar } from "primereact/avatar";
+import { NavLink } from "react-router-dom";
 
 function NavElements() {
     const items = [
         {
             label: "Home",
             icon: "pi pi-home",
-            href: "#",
+            href: "/home",
         },
         {
             label: "About",
             icon: "pi pi-star",
-            href: "#about",
+            href: "/aboutMe",
         },
         {
             label: "Projects",
             icon: "pi pi-search",
-            href: "#projects",
+            href: "/projects",
+        },
+        {
+            label: "Resume",
+            icon: "pi pi-file",
+            href: "/resume",
         },
         {
             label: "Contact",
             icon: "pi pi-envelope",
-            href: "#contact",
+            href: "/contact",
         },
     ];
     const navElements = items.map((item, index) => {
         return (
             <li key={index} className="p-mr-1">
-                <a href={item.href} className="nav-elements">
+                <NavLink className="nav-elements" to={item.href}>
                     <span className="mx-1">{item.label}</span>
                     <span
                         className={item.icon}
                         style={{ fontSize: "1.5rem" }}
                     />
-                </a>
+                </NavLink>
             </li>
         );
     });
