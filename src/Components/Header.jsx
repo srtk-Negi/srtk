@@ -1,6 +1,7 @@
 import React from "react";
 import { Avatar } from "primereact/avatar";
 import { NavLink } from "react-router-dom";
+import "../scss/header.scss";
 
 function NavElements() {
     const items = [
@@ -35,10 +36,7 @@ function NavElements() {
             <li key={index} className="p-mr-1">
                 <NavLink className="nav-elements" to={item.href}>
                     <span className="mx-1">{item.label}</span>
-                    <span
-                        className={item.icon}
-                        style={{ fontSize: "1.5rem" }}
-                    />
+                    <span className={item.icon} style={{ fontSize: "1rem" }} />
                 </NavLink>
             </li>
         );
@@ -56,13 +54,13 @@ function NavElements() {
 
 export default function Header() {
     const avatar = (
-        <div className="flex align-items-center gap-2">
+        <div className="flex align-items-center gap-2 ">
             <Avatar
                 image="src/assets/images/memoji.jpeg"
                 shape="circle"
                 size="xlarge"
             />
-            <h1>Sarthak Negi</h1>
+            <h1 className="username">Sarthak Negi</h1>
         </div>
     );
 
