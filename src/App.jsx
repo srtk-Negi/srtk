@@ -33,7 +33,7 @@ export default function App() {
                 <Router>
                     <Header />
                     <Routes>
-                        <Route path="/" Component={AboutMe} />
+                        <Route path="/" Component={Home} />
                         <Route path="/home" Component={Home} />
                         <Route path="/aboutMe" Component={AboutMe} />
                         <Route path="/projects" Component={Projects} />
