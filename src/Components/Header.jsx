@@ -34,7 +34,7 @@ function NavElements() {
     const navElements = items.map((item, index) => {
         return (
             <li key={index} className="p-mr-1">
-                <NavLink className="nav-elements" to={item.href}>
+                <NavLink className="nav-element" to={item.href}>
                     <span className="mx-1">{item.label}</span>
                     <span className={item.icon} style={{ fontSize: "1rem" }} />
                 </NavLink>

@@ -4,22 +4,17 @@
     padding: 10% 10%;
     display: flex;
     height: 100%;
-    background-color: $background-color;
-}
 
-.aboutMe h1 {
-    color: $main-text;
-    font-size: 2.5rem;
-    font-weight: 400;
-    padding-bottom: 2rem;
-}
+    h1 {
+        color: $main-text;
+        font-size: 2.5rem;
+        font-weight: 400;
+        padding-bottom: 2rem;
+    }
 
-.aboutMe h2 {
-    color: $normal-text;
-    font-size: 1.5rem;
-    font-weight: 400;
-}
-
-.highlight {
-    color: $highlight;
+    h2 {
+        color: $normal-text;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
 }

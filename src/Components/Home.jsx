@@ -6,13 +6,22 @@ export default function Home() {
         <div className="homePageContent">
             <h1>Sarthak Negi</h1>
             <h2>
-                Software Developer and Research Assistant at the Data Analytics
-                Center, UTSA
+                <span className="text-highlight">Software Developer</span> and
+                <span className="text-highlight"> Research Assistant</span> at
+                the{" "}
+                <span className="text-highlight">
+                    <a href="https://dac.utsa.edu/" target="_blank">
+                        Data Analytics Center, UTSA
+                    </a>
+                </span>
+                .
             </h2>
             <h2>
-                Junior Computer Science student at The University of Texas at
-                San Antonio with a concentration in Software Engineering and
-                Data Science.
+                Junior <span className="text-highlight">Computer Science</span>{" "}
+                student at The University of Texas at San Antonio with a
+                concentration in{" "}
+                <span className="text-highlight">Software Engineering </span>and
+                <span className="text-highlight">Data Science</span>.
             </h2>
         </div>
     );

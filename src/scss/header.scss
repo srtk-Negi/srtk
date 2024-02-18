@@ -9,22 +9,21 @@
     padding: 30px 40px;
     background-color: $navbar-color;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
-}
 
-.nav-elements {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: $main-text;
-    &:hover {
-        color: $nav-elements-color_hover;
+    .nav-element {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $main-text;
+        &:hover {
+            color: $nav-elements-color_hover;
+        }
     }
-}
-
-.username {
-    font-size: 2rem;
-    color: $main-text;
-    text-decoration: none;
-    &:hover {
-        color: $nav-elements-color_hover;
+    .username {
+        font-size: 2rem;
+        color: $main-text;
+        text-decoration: none;
+        &:hover {
+            color: $nav-elements-color_hover;
+        }
     }
 }
