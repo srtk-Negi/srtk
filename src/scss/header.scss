@@ -17,6 +17,9 @@
         &:hover {
             color: $nav-elements-color_hover;
         }
+        &.active {
+            color: $nav-elements-color_hover;
+        }
     }
     .username {
         font-size: 2rem;
