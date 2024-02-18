@@ -1,22 +1,25 @@
 @import "variables.scss";
 
 .aboutMe {
-    padding-top: 20rem;
+    padding: 10% 10%;
     display: flex;
-    height: 100vh;
+    height: 100%;
     background-color: $background-color;
 }
 
 .aboutMe h1 {
     color: $main-text;
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding-bottom: 2rem;
 }
 
 .aboutMe h2 {
     color: $normal-text;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 2rem;
+}
+
+.highlight {
+    color: $highlight;
 }

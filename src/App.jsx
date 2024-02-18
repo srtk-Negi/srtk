@@ -40,7 +40,6 @@ export default function App() {
                         <Route path="/resume" Component={Resume} />
                         <Route path="/contact" Component={ContactMe} />
                     </Routes>
-                    <Footer />
                 </Router>
             </div>
         </PrimeReactProvider>
