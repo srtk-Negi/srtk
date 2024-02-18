@@ -33,7 +33,7 @@ function NavElements() {
     ];
     const navElements = items.map((item, index) => {
         return (
-            <li key={index} className="p-mr-1 text-with-line">
+            <li key={index} className="p-mr-1 text-with-line-hover">
                 <NavLink className="nav-element" to={item.href}>
                     <span className="mx-1">{item.label}</span>
                     <span className={item.icon} style={{ fontSize: "1rem" }} />

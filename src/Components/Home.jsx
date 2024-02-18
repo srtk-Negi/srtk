@@ -4,12 +4,12 @@ import "../scss/home.scss";
 export default function Home() {
     return (
         <div className="homePageContent">
-            <h1 className="text-with-line">Sarthak Negi</h1>
+            <h1 className="text-with-line-hover">Sarthak Negi</h1>
             <h2>
                 <span className="text-highlight">Software Developer</span> and
                 <span className="text-highlight"> Research Assistant</span> at
                 the{" "}
-                <span className="text-highlight">
+                <span className="text-highlight text-with-line-permanent">
                     <a href="https://dac.utsa.edu/" target="_blank">
                         Data Analytics Center, UTSA
                     </a>
