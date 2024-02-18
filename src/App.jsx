@@ -17,6 +17,7 @@ import Projects from "./Components/Projects";
 import Resume from "./Components/Resume";
 import Footer from "./Components/Footer";
 import ContactMe from "./Components/ContactMe";
+import SideBar from "./Components/SideBar";
 
 // Importing styles
 import "./scss/header.scss";
@@ -32,6 +33,7 @@ export default function App() {
             <div className="app">
                 <Router>
                     <Header />
+                    <SideBar />
                     <Routes>
                         <Route path="/" Component={Home} />
                         <Route path="/home" Component={Home} />

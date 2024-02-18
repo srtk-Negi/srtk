@@ -20,7 +20,7 @@ export default function Home() {
                 Junior <span className="text-highlight">Computer Science</span>{" "}
                 student at The University of Texas at San Antonio with a
                 concentration in{" "}
-                <span className="text-highlight">Software Engineering </span>and
+                <span className="text-highlight">Software Engineering </span>and{" "}
                 <span className="text-highlight">Data Science</span>.
             </h2>
         </div>
