@@ -1,20 +1,46 @@
 @import "variables.scss";
 
 .aboutMe {
-    padding: 10% 10%;
+    padding: 5% 10% 0 10%;
     display: flex;
+    flex-direction: row;
     height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .intro {
+        width: 100%;
+        h1 {
+            color: $main-text;
+            font-size: 2.5rem;
+            font-weight: 400;
+            padding-bottom: 2rem;
+        }
 
-    h1 {
-        color: $main-text;
-        font-size: 2.5rem;
-        font-weight: 400;
-        padding-bottom: 2rem;
+        h2 {
+            color: $normal-text;
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
     }
 
-    h2 {
-        color: $normal-text;
-        font-size: 1.5rem;
-        font-weight: 400;
+    .skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        color: $main-text;
+        height: 100%;
+
+        .skill-box-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 2rem 0;
+            flex-wrap: wrap;
+        }
     }
 }
