@@ -1,10 +1,36 @@
 import React from "react";
 
 export default function SideBar() {
+    const icons = [
+        {
+            label: "LinkedIn",
+            icon: "pi pi-linkedin",
+            url: "https://www.linkedin.com/in/sarthak-negi-98301b1b7/",
+        },
+        {
+            label: "GitHub",
+            icon: "pi pi-github",
+            url: "https://github.com/srtk-Negi",
+        },
+        {
+            label: "Twitter",
+            icon: "pi pi-twitter",
+            url: "https://twitter.com/srtk_negi",
+        },
+    ];
+
     return (
-        <div className="left-0 flex flex-col font-bold h-screen w-16 m-0 text-white">
-            <div>A</div>
-            <div>B</div>
+        <div className="sidebar">
+            {icons.map((icon) => (
+                <div key={icon.label} className="icon">
+                    <a href={icon.url} target="_blank">
+                        <i
+                            className={icon.icon}
+                            style={{ fontSize: "2rem" }}
+                        ></i>
+                    </a>
+                </div>
+            ))}
         </div>
     );
 }

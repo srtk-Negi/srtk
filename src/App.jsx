@@ -26,6 +26,7 @@ import "./scss/projects.scss";
 import "./scss/resume.scss";
 import "./scss/footer.scss";
 import "./scss/contactMe.scss";
+import "./scss/sidebar.scss";
 
 export default function App() {
     return (

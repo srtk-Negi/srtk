@@ -5,7 +5,30 @@ $normal-text: #94a1b2;
 $buton-color: #7f5af0;
 $nav-elements-color_hover: #7f5af0;
 $highlight: #7f5af0;
+$sidebar-color: #202225;
 
 .text-highlight {
     color: $highlight;
+}
+
+.text-with-line {
+    position: relative;
+    display: inline-block;
+    color: $main-text;
+    text-decoration: none;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background-color: $highlight;
+        transition: width 0.5s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
 }
