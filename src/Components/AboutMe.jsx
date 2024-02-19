@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "primereact/button";
 
 function Intro() {
     return (
@@ -43,10 +44,14 @@ function Intro() {
 }
 
 function SkillBox({ skill }) {
-    return <div className="skill-box">{skill}</div>;
+    return (
+        <div className="skill-box">
+            <Button label={skill} raised rounded severity="help" outlined />
+        </div>
+    );
 }
 
-function Skills({ skills }) {
+function SkillsSection({ skills }) {
     return (
         <div className="skills">
             <h1>Skills</h1>
@@ -67,36 +72,34 @@ export default function AboutMe() {
         "React",
         "Node.js",
         "Express.js",
+        "FastAPI",
+        "MS SQL",
+        "PostgreSQL",
+        "MySQL",
         "MongoDB",
-        "SQL",
         "HTML",
         "CSS",
         "Git",
+        "GitHub",
         "AWS",
-        "GCP",
-        "Azure",
-        "TensorFlow",
         "PyTorch",
-        "Keras",
         "Pandas",
         "Numpy",
         "Matplotlib",
-        "Seaborn",
         "Scikit-learn",
         "Jupyter",
         "Flask",
-        "Django",
         "REST",
-        "GraphQL",
-        "CI/CD",
-        "GitHub Actions",
         "Nginx",
+        "BeautifulSoup",
+        "Selenium",
+        "Pytest",
     ];
 
     return (
         <div className="aboutMe">
             <Intro />
-            <Skills skills={skills} />
+            <SkillsSection skills={skills} />
         </div>
     );
 }
