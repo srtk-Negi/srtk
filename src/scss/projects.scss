@@ -1,5 +1,73 @@
-#projects {
-    padding-top: 20rem;
-    height: 100vh;
+@import "variables.scss";
+
+.projects {
+    padding: 5% 10% 0 10%;
     display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: $main-text;
+
+    .project-card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        margin: 5rem 0;
+
+        .project-img {
+            width: 50%;
+            height: 30%;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
+
+            img {
+                width: 90%;
+                height: 70%;
+                border-radius: 10px;
+            }
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            width: 50%;
+
+            h2 {
+                font-size: 3rem;
+                margin: 1rem 0;
+                font-weight: 400;
+            }
+
+            p {
+                font-size: 1.3rem;
+                margin: 1rem 0;
+                font-weight: 400;
+            }
+
+            .button {
+                Button {
+                    color: $highlight;
+
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    cursor: pointer;
+                    transition: background-color 0.5s ease;
+
+                    &:hover {
+                        background-color: $nav-elements-color_hover;
+                        color: $main-text;
+                    }
+                }
+            }
+        }
+    }
 }
