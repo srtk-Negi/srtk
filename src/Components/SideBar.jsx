@@ -17,6 +17,11 @@ export default function SideBar() {
             icon: "pi pi-twitter",
             url: "https://twitter.com/srtk_negi",
         },
+        {
+            label: "Email",
+            icon: "pi pi-envelope",
+            url: "mailto:srnegi141@gmail.com",
+        },
     ];
 
     return (
