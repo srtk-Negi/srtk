@@ -53,6 +53,19 @@
                 font-weight: 400;
             }
 
+            .stack {
+                .stack-item {
+                    display: inline-block;
+                    margin: 1rem 0.5rem;
+                    padding: 0.5rem 1rem;
+                    border-radius: 20px;
+                    background-color: $sidebar-color;
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+                }
+            }
+
             .button {
                 Button {
                     color: $highlight;
