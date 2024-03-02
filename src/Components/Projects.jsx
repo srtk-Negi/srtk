@@ -75,7 +75,7 @@ export default function Projects() {
             description: "This is my personal portfolio website.",
             image: "src/assets/images/portfolio.png",
             github: "https://github.com/srtk-Negi/portfolio-website",
-            stackUsed: ["React", "SCSS"],
+            stackUsed: ["React", "SCSS", "PrimeReact"],
         },
         {
             title: "Commentalyzer",
