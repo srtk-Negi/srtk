@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Avatar } from "primereact/avatar";
 import { NavLink } from "react-router-dom";
-import "../scss/header.scss";
+import "../scss/navbar.scss";
 
 function NavElements() {
     const items = [
@@ -31,28 +31,36 @@ function NavElements() {
             href: "/contact",
         },
     ];
-    const navElements = items.map((item, index) => {
-        return (
-            <li key={index} className="p-mr-1 text-with-line-hover">
-                <NavLink className="nav-element" to={item.href}>
-                    <span className="mx-1">{item.label}</span>
-                    <span className={item.icon} style={{ fontSize: "1rem" }} />
-                </NavLink>
-            </li>
-        );
-    });
 
     return (
         <ul
             className="flex flex-wrap align-items-center gap-8 justify-content-center"
             style={{ listStyleType: "none" }}
         >
-            {navElements}
+            {items.map((item, index) => {
+                return (
+                    <li key={index} className="p-mr-1 text-with-line-hover">
+                        <NavLink className="nav-element" to={item.href}>
+                            <span className="mx-1">{item.label}</span>
+                            <span
+                                className={item.icon}
+                                style={{ fontSize: "1rem" }}
+                            />
+                        </NavLink>
+                    </li>
+                );
+            })}
         </ul>
     );
 }
 
-export default function Header() {
+export default function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(true);
+
+    const handleMenuOpening = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     const avatar = (
         <div className="flex align-items-center gap-2 ">
             <Avatar
@@ -67,7 +75,14 @@ export default function Header() {
     return (
         <div id="header">
             {avatar}
-            <NavElements />
+            {isMenuOpen ? (
+                <div className="menu">
+                    <NavElements />
+                </div>
+            ) : null}
+            <button className="navbar-toggle" onClick={handleMenuOpening}>
+                <i className={"pi pi-bars"} style={{ fontSize: "2rem" }} />
+            </button>
         </div>
     );
 }
