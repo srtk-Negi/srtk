@@ -52,7 +52,15 @@ export default function Projects() {
                 "Guardian Wheels -An advanced car alarm system that uses AI to recognize when a burglary is in progress. Images (via internal dashcam and drone) & geo info are sent to the user and the police.",
             image: "src/assets/images/GWheels.png",
             github: "https://github.com/srtk-Negi/Guardian-Wheels",
-            stackUsed: ["Python", "FastAPI", "JavaScript", "HTML", "CSS"],
+            stackUsed: [
+                "Python",
+                "FastAPI",
+                "JavaScript",
+                "Twilio",
+                "Arduino",
+                "AWS",
+                "MySQL",
+            ],
         },
         {
             title: "Workout Tracker",
@@ -75,13 +83,7 @@ export default function Projects() {
                 "Fetches all the comments from a youtube video and performs sentiment analysis.Uses the YouTube API to get all the comments from the video the link was provided for. Uses the OpenAI API to access ChatGPT to perform sentiment analysis.",
             image: "src/assets/images/defaultProj.png",
             github: "https://github.com/srtk-Negi/commentalyzer",
-            stackUsed: [
-                "React",
-                "Node.js",
-                "Express",
-                "OpenAI API",
-                "YouTube API",
-            ],
+            stackUsed: ["Python", "OpenAI API", "YouTube API"],
         },
     ];
 
