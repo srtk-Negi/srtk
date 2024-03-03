@@ -2,50 +2,41 @@ import React, { useState } from "react";
 import { Avatar } from "primereact/avatar";
 import { NavLink } from "react-router-dom";
 import "../scss/navbar.scss";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button } from "primereact/button";
 
 function NavElements() {
     const items = [
         {
             label: "Home",
-            icon: "pi pi-home",
             href: "/home",
         },
         {
             label: "About",
-            icon: "pi pi-star",
             href: "/aboutMe",
         },
         {
             label: "Projects",
-            icon: "pi pi-search",
             href: "/projects",
         },
         {
             label: "Resume",
-            icon: "pi pi-file",
             href: "/resume",
         },
         {
             label: "Contact",
-            icon: "pi pi-envelope",
             href: "/contact",
         },
     ];
 
     return (
-        <ul
-            className="flex flex-wrap align-items-center gap-8 justify-content-center"
-            style={{ listStyleType: "none" }}
-        >
+        <ul className="menu">
             {items.map((item, index) => {
                 return (
                     <li key={index} className="p-mr-1 text-with-line-hover">
                         <NavLink className="nav-element" to={item.href}>
-                            <span className="mx-1">{item.label}</span>
-                            <span
-                                className={item.icon}
-                                style={{ fontSize: "1rem" }}
-                            />
+                            {item.label}
                         </NavLink>
                     </li>
                 );
@@ -62,27 +53,28 @@ export default function Navbar() {
     };
 
     const avatar = (
-        <div className="flex align-items-center gap-2 ">
+        <div className="avatar">
             <Avatar
                 image="src/assets/images/memoji.jpeg"
                 shape="circle"
                 size="xlarge"
-            />
-            <h1 className="username">Sarthak Negi</h1>
+            >
+                Sarthak Negi
+            </Avatar>
         </div>
     );
 
     return (
         <div id="header">
             {avatar}
-            {isMenuOpen ? (
-                <div className="menu">
-                    <NavElements />
-                </div>
-            ) : null}
-            <button className="navbar-toggle" onClick={handleMenuOpening}>
-                <i className={"pi pi-bars"} style={{ fontSize: "2rem" }} />
-            </button>
+            {isMenuOpen ? <NavElements /> : null}
+            <Button
+                className="burgerMenuBtn"
+                outlined
+                onClick={handleMenuOpening}
+            >
+                <FontAwesomeIcon icon={faBars} size="2x" inverse />
+            </Button>
         </div>
     );
 }

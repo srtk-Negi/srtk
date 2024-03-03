@@ -62,3 +62,30 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .aboutMe {
+        flex-direction: column;
+        padding: 5% 10% 0 10%;
+        .intro {
+            width: 100%;
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+        .skills {
+            padding-left: 0;
+            h1 {
+                font-size: 2rem;
+            }
+            .skill-box-container {
+                .skill-box {
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+}
