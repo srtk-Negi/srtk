@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import { Avatar } from "primereact/avatar";
 import { NavLink } from "react-router-dom";
 import "../scss/navbar.scss";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button } from "primereact/button";
 
-function NavElements() {
+function NavElements({ isMenuOpen }) {
     const items = [
         {
             label: "Home",
@@ -31,7 +28,7 @@ function NavElements() {
     ];
 
     return (
-        <ul className="menu">
+        <ul className={`menu ${isMenuOpen ? "open" : ""}`}>
             {items.map((item, index) => {
                 return (
                     <li key={index} className="p-mr-1 text-with-line-hover">
@@ -46,11 +43,11 @@ function NavElements() {
 }
 
 export default function Navbar() {
-    const [isMenuOpen, setIsMenuOpen] = useState(true);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const handleMenuOpening = () => {
+    function toggleMenu() {
         setIsMenuOpen(!isMenuOpen);
-    };
+    }
 
     const avatar = (
         <div className="avatar">
@@ -67,14 +64,7 @@ export default function Navbar() {
     return (
         <div id="header">
             {avatar}
-            {isMenuOpen ? <NavElements /> : null}
-            <Button
-                className="burgerMenuBtn"
-                outlined
-                onClick={handleMenuOpening}
-            >
-                <FontAwesomeIcon icon={faBars} size="2x" inverse />
-            </Button>
+            <NavElements isMenuOpen={isMenuOpen} />
         </div>
     );
 }

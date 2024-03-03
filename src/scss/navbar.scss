@@ -43,14 +43,6 @@
         }
     }
 
-    Button {
-        display: none;
-        color: $highlight;
-        background-color: transparent;
-        cursor: pointer;
-        padding: 0.2rem 0.5rem;
-    }
-
     @media (max-width: 948px) {
         .menu {
             .nav-element {
@@ -64,11 +56,16 @@
 
     @media (max-width: 768px) {
         .menu {
-            display: none;
-        }
+            display: flex;
+            flex-direction: column;
 
-        Button {
-            display: block;
+            .nav-element {
+                font-size: 1.5rem;
+            }
+
+            li {
+                margin: 0.4rem 0;
+            }
         }
     }
 }
