@@ -10,7 +10,7 @@ import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
 
 // Importing components
-import Header from "./Components/Navbar";
+import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import AboutMe from "./Components/AboutMe";
 import Projects from "./Components/Projects";
@@ -19,7 +19,7 @@ import ContactMe from "./Components/ContactMe";
 import SideBar from "./Components/SideBar";
 
 // Importing styles
-import "./scss/header.scss";
+import "./scss/navbar.scss";
 import "./scss/aboutMe.scss";
 import "./scss/projects.scss";
 import "./scss/resume.scss";
@@ -32,7 +32,7 @@ export default function App() {
         <PrimeReactProvider>
             <div className="app">
                 <Router>
-                    <Header />
+                    <Navbar />
                     <SideBar />
                     <Routes>
                         <Route path="/" Component={Home} />
