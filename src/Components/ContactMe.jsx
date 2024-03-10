@@ -6,6 +6,7 @@ import { Divider } from "primereact/divider";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import "../assets/css/contactMe.css";
+import { schema } from "../schema";
 
 export default function ContactMe() {
     const form = useRef();
@@ -16,19 +17,30 @@ export default function ContactMe() {
 
     const sendEmail = (e) => {
         e.preventDefault();
-
-        emailjs
-            .sendForm(serviceId, templateId, form.current, {
-                publicKey: publicKey,
+        schema
+            .validate({
+                name: e.target.user_name.value,
+                email: e.target.user_email.value,
+                message: e.target.message.value,
             })
-            .then(
-                () => {
-                    alert("Message Sent!");
-                },
-                (error) => {
-                    alert("FAILED...", error.text);
-                }
-            );
+            .then(() => {
+                emailjs
+                    .sendForm(serviceId, templateId, form.current, {
+                        publicKey: publicKey,
+                    })
+                    .then(
+                        () => {
+                            alert("Message Sent!");
+                            form.current.reset();
+                        },
+                        (error) => {
+                            alert("FAILED...", error.text);
+                        }
+                    );
+            })
+            .catch((error) => {
+                alert(error.errors);
+            });
     };
 
     return (
@@ -51,7 +63,7 @@ export default function ContactMe() {
                             <label htmlFor="email">Email</label>
                             <InputText
                                 id="email"
-                                type="text"
+                                type="email"
                                 name="user_email"
                             />
                         </div>

@@ -18,8 +18,6 @@ import Resume from "./Components/Resume";
 import ContactMe from "./Components/ContactMe";
 import SideBar from "./Components/SideBar";
 
-// Importing styles
-
 export default function App() {
     return (
         <PrimeReactProvider>
