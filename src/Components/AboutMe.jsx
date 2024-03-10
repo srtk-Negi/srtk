@@ -1,6 +1,8 @@
 import React from "react";
 import { Button } from "primereact/button";
 
+import "../assets/css/aboutMe.css";
+
 function Intro() {
     return (
         <div className="intro">

@@ -1,5 +1,7 @@
 import React from "react";
 
+import "../assets/css/sidebar.css";
+
 export default function SideBar() {
     const icons = [
         {
