@@ -7,6 +7,9 @@ import { Divider } from "primereact/divider";
 import "../assets/css/contactMe.css";
 
 export default function ContactMe() {
+    const sendMessage = () => {
+        alert("Message sent successfully");
+    };
     return (
         <div className="contactMe">
             <Card className="contact-card">
@@ -25,8 +28,17 @@ export default function ContactMe() {
                         <label htmlFor="message">Message</label>
                         <InputTextarea id="message" type="text" rows={5} />
                     </div>
-                    <div className="p-d-flex p-jc-center p-mt-4">
-                        <Button label="Send" />
+                    <div className="button">
+                        <div className="btnContainer">
+                            <Button
+                                rounded
+                                raised
+                                outlined
+                                onClick={sendMessage}
+                            >
+                                Send
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </Card>
