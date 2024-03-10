@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Avatar } from "primereact/avatar";
 import { NavLink } from "react-router-dom";
 import "../assets/css/navbar.css";
+import memoJi from "/memoji.jpeg";
 
 function NavElements({ isMenuOpen }) {
     const items = [
@@ -51,11 +52,7 @@ export default function Navbar() {
 
     const avatar = (
         <div className="avatar">
-            <Avatar
-                image="src/assets/images/memoji.jpeg"
-                shape="circle"
-                size="xlarge"
-            >
+            <Avatar image={memoJi} shape="circle" size="xlarge">
                 Sarthak Negi
             </Avatar>
         </div>

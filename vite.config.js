@@ -11,5 +11,8 @@ export default defineConfig(({ command, mode }) => {
         define: {
             "process.env": env, // Make environment variables available as process.env
         },
+        build: {
+            assetsDir: "src/assets/images",
+        },
     };
 });

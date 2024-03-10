@@ -1,13 +1,11 @@
 import { Button } from "primereact/button";
 import "../assets/css/resume.css";
+import resume from "/Resume-SarthakNegi.pdf";
 
 export default function Resume() {
     return (
         <div id="resume">
-            <iframe
-                src="src/assets/resume/Resume-SarthakNegi.pdf"
-                className="resumeFrame"
-            ></iframe>
+            <iframe src={resume} className="resumeFrame"></iframe>
             <div className="button">
                 <a
                     href="src/assets/resume/Resume-SarthakNegi.pdf"

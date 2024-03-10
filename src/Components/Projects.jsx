@@ -2,6 +2,10 @@ import React from "react";
 import { Button } from "primereact/button";
 
 import "../assets/css/projects.css";
+import defaultProj from "/defaultProj.png";
+import GWheels from "/GWheels.png";
+import workTracker from "/workTracker.png";
+import portfolio from "/portfolio.png";
 
 function ProjectCard(props) {
     return (
@@ -52,7 +56,7 @@ export default function Projects() {
             title: "Guardian Wheels",
             description:
                 "Guardian Wheels -An advanced car alarm system that uses AI to recognize when a burglary is in progress. Images (via internal dashcam and drone) & geo info are sent to the user and the police.",
-            image: "src/assets/images/GWheels.png",
+            image: GWheels,
             github: "https://github.com/srtk-Negi/Guardian-Wheels",
             stackUsed: [
                 "Python",
@@ -68,14 +72,14 @@ export default function Projects() {
             title: "Workout Tracker",
             description:
                 "A workout tracker web application that uses the Geolocation API to find your current location and helps you keep record of your runnning and cycling workouts.",
-            image: "src/assets/images/workTracker.png",
+            image: workTracker,
             github: "https://github.com/srtk-Negi/Work-Tracker",
             stackUsed: ["HTML", "CSS", "JavaScript"],
         },
         {
             title: "Personal Portfolio",
             description: "This is my personal portfolio website.",
-            image: "src/assets/images/portfolio.png",
+            image: portfolio,
             github: "https://github.com/srtk-Negi/portfolio-website",
             stackUsed: ["React", "SCSS", "PrimeReact"],
         },
@@ -83,7 +87,7 @@ export default function Projects() {
             title: "Commentalyzer",
             description:
                 "Fetches all the comments from a youtube video and performs sentiment analysis.Uses the YouTube API to get all the comments from the video the link was provided for. Uses the OpenAI API to access ChatGPT to perform sentiment analysis.",
-            image: "src/assets/images/defaultProj.png",
+            image: defaultProj,
             github: "https://github.com/srtk-Negi/commentalyzer",
             stackUsed: ["Python", "OpenAI API", "YouTube API"],
         },
