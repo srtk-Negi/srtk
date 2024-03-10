@@ -23,7 +23,7 @@
         color: $main-text;
 
         &:hover {
-            transform: scale(1.05);
+            transform: scale(1.01);
         }
 
         h1 {
@@ -35,6 +35,26 @@
             div {
                 margin-top: 2rem;
                 font-size: 1.5rem;
+            }
+
+            .button {
+                margin-top: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                Button {
+                    color: $highlight;
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    cursor: pointer;
+                    transition: background-color 0.5s ease;
+
+                    &:hover {
+                        background-color: $nav-elements-color_hover;
+                        color: $main-text;
+                    }
+                }
             }
         }
     }

@@ -61,7 +61,7 @@
   color: #fffffe;
 }
 .contactMe .contact-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 .contactMe .contact-card h1 {
   font-size: 2rem;
@@ -70,4 +70,21 @@
 .contactMe .contact-card .card-fields div {
   margin-top: 2rem;
   font-size: 1.5rem;
+}
+.contactMe .contact-card .card-fields .button {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contactMe .contact-card .card-fields .button Button {
+  color: #7f5af0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.contactMe .contact-card .card-fields .button Button:hover {
+  background-color: #7f5af0;
+  color: #fffffe;
 }/*# sourceMappingURL=contactMe.css.map */
