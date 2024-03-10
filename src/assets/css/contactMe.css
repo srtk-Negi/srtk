@@ -72,19 +72,21 @@
   font-size: 1.5rem;
 }
 .contactMe .contact-card .card-fields .button {
-  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.contactMe .contact-card .card-fields .button Button {
+.contactMe .contact-card .card-fields .button .btnContainer {
+  margin-top: 0;
+}
+.contactMe .contact-card .card-fields .button .btnContainer Button {
   color: #7f5af0;
   font-size: 1.3rem;
   font-weight: 400;
   cursor: pointer;
   transition: background-color 0.5s ease;
 }
-.contactMe .contact-card .card-fields .button Button:hover {
+.contactMe .contact-card .card-fields .button .btnContainer Button:hover {
   background-color: #7f5af0;
   color: #fffffe;
 }/*# sourceMappingURL=contactMe.css.map */
