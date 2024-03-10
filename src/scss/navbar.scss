@@ -24,10 +24,10 @@
             text-decoration: none;
             color: $main-text;
             &:hover {
-                color: $nav-elements-color_hover;
+                color: $purple;
             }
             &.active {
-                color: $nav-elements-color_hover;
+                color: $purple;
             }
         }
     }
@@ -39,7 +39,7 @@
         color: $main-text;
         text-decoration: none;
         &:hover {
-            color: $nav-elements-color_hover;
+            color: $purple;
         }
     }
 

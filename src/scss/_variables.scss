@@ -1,14 +1,13 @@
 $navbar-color: #111111;
-$background-color: #242629;
+$background-color-start: #111111;
+$background-color-end: #242629;
 $main-text: #fffffe;
-$normal-text: #94a1b2;
-$button-color: #7f5af0;
-$nav-elements-color_hover: #7f5af0;
-$highlight: #7f5af0;
+$faded-text: #94a1b2;
+$purple: #7f5af0;
 $sidebar-color: #202225;
 
 .text-highlight {
-    color: $highlight;
+    color: $purple;
 }
 
 .text-with-line-hover {
@@ -24,7 +23,7 @@ $sidebar-color: #202225;
         bottom: -2px;
         width: 0;
         height: 2px;
-        background-color: $highlight;
+        background-color: $purple;
         transition: width 0.5s ease;
     }
 
@@ -46,6 +45,6 @@ $sidebar-color: #202225;
         bottom: -2px;
         width: 100%;
         height: 4px;
-        background-color: $highlight;
+        background-color: $purple;
     }
 }
