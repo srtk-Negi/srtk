@@ -1,4 +1,5 @@
 import { Button } from "primereact/button";
+import "../assets/css/resume.css";
 
 export default function Resume() {
     return (
@@ -6,7 +7,6 @@ export default function Resume() {
             <iframe
                 src="src/assets/resume/Resume-SarthakNegi.pdf"
                 className="resumeFrame"
-                frameborder="0"
             ></iframe>
             <div className="button">
                 <a

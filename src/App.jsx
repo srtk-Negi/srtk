@@ -19,13 +19,6 @@ import ContactMe from "./Components/ContactMe";
 import SideBar from "./Components/SideBar";
 
 // Importing styles
-import "./scss/navbar.scss";
-import "./scss/aboutMe.scss";
-import "./scss/projects.scss";
-import "./scss/resume.scss";
-import "./scss/footer.scss";
-import "./scss/contactMe.scss";
-import "./scss/sidebar.scss";
 
 export default function App() {
     return (

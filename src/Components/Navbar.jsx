@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Avatar } from "primereact/avatar";
 import { NavLink } from "react-router-dom";
-import "../scss/navbar.scss";
+import "../assets/css/navbar.css";
 
 function NavElements({ isMenuOpen }) {
     const items = [

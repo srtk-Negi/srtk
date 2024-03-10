@@ -1,0 +1,73 @@
+.text-highlight {
+  color: #7f5af0;
+}
+
+.text-with-line-hover {
+  position: relative;
+  display: inline-block;
+  color: #fffffe;
+  text-decoration: none;
+}
+.text-with-line-hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #7f5af0;
+  transition: width 0.5s ease;
+}
+.text-with-line-hover:hover::after {
+  width: 100%;
+}
+
+.text-with-line-permanent {
+  position: relative;
+  display: inline-block;
+  color: #fffffe;
+  text-decoration: none;
+}
+.text-with-line-permanent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 4px;
+  background-color: #7f5af0;
+}
+
+.contactMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.contactMe .contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #202225;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem;
+  transition: transform 0.5s ease;
+  color: #fffffe;
+}
+.contactMe .contact-card:hover {
+  transform: scale(1.05);
+}
+.contactMe .contact-card h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contactMe .contact-card .card-fields div {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=contactMe.css.map */

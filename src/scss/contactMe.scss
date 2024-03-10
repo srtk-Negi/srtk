@@ -1,5 +1,41 @@
-#contactMe {
-    padding-top: 20rem;
+@import "variables.scss";
+
+.contactMe {
     display: flex;
-    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    .contact-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        background-color: $sidebar-color;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 500px;
+        margin: 2rem;
+        transition: transform 0.5s ease;
+        color: $main-text;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-fields {
+            div {
+                margin-top: 2rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
 }
