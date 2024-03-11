@@ -1,6 +1,11 @@
 // Code: Main App component
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes,
+    Navigate,
+} from "react-router-dom";
 
 // Importing PrimeReact components
 import { PrimeReactProvider } from "primereact/api";
@@ -17,6 +22,7 @@ import Projects from "./Components/Projects";
 import Resume from "./Components/Resume";
 import ContactMe from "./Components/ContactMe";
 import SideBar from "./Components/SideBar";
+import ErrorPage from "./Components/ErrorPage";
 
 export default function App() {
     return (
@@ -26,12 +32,13 @@ export default function App() {
                     <Navbar />
                     <SideBar />
                     <Routes>
-                        <Route path="/" Component={Home} />
-                        <Route path="/home" Component={Home} />
-                        <Route path="/aboutMe" Component={AboutMe} />
-                        <Route path="/projects" Component={Projects} />
-                        <Route path="/resume" Component={Resume} />
-                        <Route path="/contact" Component={ContactMe} />
+                        <Route path="/" element={<Navigate to="/home" />} />
+                        <Route index path="/home" element={<Home />} />
+                        <Route path="/aboutMe" element={<AboutMe />} />
+                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/resume" element={<Resume />} />
+                        <Route path="/contact" element={<ContactMe />} />
+                        <Route path="*" element={<ErrorPage />} />
                     </Routes>
                 </Router>
             </div>
