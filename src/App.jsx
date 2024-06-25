@@ -1,10 +1,9 @@
 // Code: Main App component
-import React from "react";
 import {
-    BrowserRouter as Router,
-    Route,
-    Routes,
-    Navigate,
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
 } from "react-router-dom";
 
 // Importing PrimeReact components
@@ -25,23 +24,23 @@ import SideBar from "./Components/SideBar";
 import ErrorPage from "./Components/ErrorPage";
 
 export default function App() {
-    return (
-        <PrimeReactProvider>
-            <div className="app">
-                <Router>
-                    <Navbar />
-                    <SideBar />
-                    <Routes>
-                        <Route path="/" element={<Navigate to="/home" />} />
-                        <Route index path="/home" element={<Home />} />
-                        <Route path="/aboutMe" element={<AboutMe />} />
-                        <Route path="/projects" element={<Projects />} />
-                        <Route path="/resume" element={<Resume />} />
-                        <Route path="/contact" element={<ContactMe />} />
-                        <Route path="*" element={<ErrorPage />} />
-                    </Routes>
-                </Router>
-            </div>
-        </PrimeReactProvider>
-    );
+  return (
+    <PrimeReactProvider>
+      <div className="app">
+        <Router>
+          <Navbar />
+          <SideBar />
+          <Routes>
+            <Route path="/" element={<Navigate to="/home" />} />
+            <Route index path="/home" element={<Home />} />
+            <Route path="/aboutMe" element={<AboutMe />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/contact" element={<ContactMe />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+        </Router>
+      </div>
+    </PrimeReactProvider>
+  );
 }
