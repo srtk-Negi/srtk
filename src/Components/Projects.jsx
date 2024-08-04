@@ -6,6 +6,7 @@ import defaultProj from "/defaultProj.png";
 import GWheels from "/GWheels.png";
 import workTracker from "/workTracker.png";
 import portfolio from "/portfolio.png";
+import pixelpulse from "/pixelpulse.png";
 
 function ProjectCard(props) {
   return (
@@ -58,6 +59,21 @@ export default function Projects() {
         "Arduino",
         "AWS",
         "MySQL",
+      ],
+    },
+    {
+      title: "Pixel Pulse",
+      description:
+        "PixelPulse is an online shopping site for purchasing PCs and related accessories. This project involved developing an online shopping website with a focus on an intuitive interface and user-friendly features. The website includes many features both on the Admin and User sides of the webpage. On the User side, we get features such as the ability to purchase individual parts for your PC, hone your searches for different products with filters, and receive detailed information on the orders that you place. On the Admin side, we have the ability to edit user information, create or edit products, review detailed order information, and much more. ",
+      image: pixelpulse,
+      github: "https://github.com/srtk-Negi/PixelPulse",
+      stackUsed: [
+        "React",
+        "Node.js",
+        "FastAPI",
+        "Postgresql",
+        "AWS RDS",
+        "AWS S3",
       ],
     },
     {
