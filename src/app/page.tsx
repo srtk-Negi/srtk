@@ -1,23 +1,31 @@
+import Hero from "@/components/hero";
+import About from "@/components/about";
+import Projects from "@/components/projects";
+import Resume from "@/components/resume";
+import Contact from "@/components/contact";
+
 export default function Home() {
   return (
-    <div className="">
-      <h1 className="">Sarthak Negi</h1>
-      <h2>
-        <span className="">Software Developer</span> and
-        <span className=""> Research Assistant</span> at the{" "}
-        <span className="">
-          <a href="https://dac.utsa.edu/" target="_blank">
-            Data Analytics Center, UTSA
-          </a>
-        </span>
-        .
-      </h2>
-      <h2>
-        Junior <span className="">Computer Science</span> student at The
-        University of Texas at San Antonio with a concentration in{" "}
-        <span className="">Software Engineering </span>and{" "}
-        <span className="">Data Science</span>.
-      </h2>
-    </div>
+    <>
+      <section id="home" className="min-h-screen">
+        <Hero />
+      </section>
+
+      <section id="about" className="py-24">
+        <About />
+      </section>
+
+      <section id="projects" className="py-24 bg-gray-50 dark:bg-neutral-900">
+        <Projects />
+      </section>
+
+      <section id="resume" className="py-24">
+        <Resume />
+      </section>
+
+      <section id="contact" className="py-24 bg-gray-50 dark:bg-neutral-900">
+        <Contact />
+      </section>
+    </>
   );
 }
