@@ -1,7 +1,7 @@
 import Link from "next/link";
-import ParticleAnimation from "@/components/particle-animation";
-import TypingEffect from "@/components/typing-effect";
-import LiquidGlassButton from "@/components/liquid-glass-button";
+import ParticleAnimation from "@/components/ParticleAnimation";
+import TypingEffect from "@/components/TypingEffect";
+import LiquidGlassButton from "@/components/LiquidGlassButton";
 
 export default function Hero() {
   return (

@@ -3,7 +3,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent } from "@/components/ui/card";
 import assetUrls from "@/app/assetUrls";
-import LiquidGlassButton from "@/components/liquid-glass-button";
+import LiquidGlassButton from "@/components/LiquidGlassButton";
 
 export default function Projects() {
   const projects = [

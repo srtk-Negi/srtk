@@ -1,7 +1,7 @@
 import { Calendar, MapPin, Building, GraduationCap } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import assetUrls from "@/app/assetUrls";
-import LiquidGlassButton from "@/components/liquid-glass-button";
+import LiquidGlassButton from "@/components/LiquidGlassButton";
 
 export default function Resume() {
   const experiences = [

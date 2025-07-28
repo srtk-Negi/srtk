@@ -7,8 +7,8 @@ import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import LiquidGlassButton from "@/components/liquid-glass-button";
-import { contactInfo } from "@/components/footer";
+import LiquidGlassButton from "@/components/LiquidGlassButton";
+import { contactInfo } from "@/components/Footer";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
