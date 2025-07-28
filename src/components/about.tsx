@@ -42,10 +42,10 @@ export default function About() {
             at San Antonio, where I graduated with a strong academic record,
             including a 3.86 GPA overall and a 3.97 in my major coursework. My
             academic achievements were recognized with awards such as the
-            Distinguished Presidential Scholarship, President's List, and Honor
-            Roll. My expertise is built upon a solid foundation in computer
-            science principles, cultivated through relevant coursework in Data
-            Structures, Systems Programming, Analysis of Algorithms, AI,
+            Distinguished Presidential Scholarship, President&apos;s List, and
+            Honor Roll. My expertise is built upon a solid foundation in
+            computer science principles, cultivated through relevant coursework
+            in Data Structures, Systems Programming, Analysis of Algorithms, AI,
             Database Systems, and Secure Software Development
           </p>
 
