@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
   try {
     const { data, error } = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: process.env.NEXT_PUBLIC_EMAIL_TO || "srnegi141@gmail.com",
+      to: "srnegi141@gmail.com",
       subject: formData.subject,
       react: EmailTemplate({
         name: formData.name,
