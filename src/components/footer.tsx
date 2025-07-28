@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const contactInfo = {
-  email: "srnegi141@gmail.com",
+  email: "contact@srtk.dev",
   phone: "+1 (210) 935-6275",
   location: "San Antonio, TX, USA",
   socialLinks: {

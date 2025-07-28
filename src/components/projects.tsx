@@ -48,13 +48,13 @@ export default function Projects() {
     },
     {
       id: 4,
-      title: "Portfolio Website",
+      title: "srtk.dev",
       description:
-        "A black and white portfolio website with a focus on typography and whitespace.",
+        "This is my personal portfolio website, built with Next.js and Tailwind CSS. It showcases my projects, skills, and experience in a clean and modern design.",
       image: assetUrls.portfolio,
-      tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
-      liveUrl: "#",
-      githubUrl: "#",
+      tags: ["Next.js", "Tailwind CSS", "TypeScript", "React"],
+      liveUrl: "https://srtk.dev/",
+      githubUrl: "https://github.com/srtk-Negi/srtk",
     },
     {
       id: 5,
