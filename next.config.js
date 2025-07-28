@@ -1,8 +1,10 @@
 import path from "path";
 import { fileURLToPath } from "url";
+import { dirname } from "path";
 
+// Create __dirname manually
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = dirname(__filename);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -17,13 +19,7 @@ const nextConfig = {
     ],
   },
   webpack: (config) => {
-    config.resolve.alias = {
-      ...(config.resolve.alias || {}),
-      "@": path.resolve(__dirname, "src"),
-    };
-    config.resolve.fallback = {
-      ...(config.resolve.fallback || {}),
-    };
+    config.resolve.alias["@"] = path.resolve(__dirname, "src");
     return config;
   },
 };
