@@ -15,7 +15,7 @@ export default function Hero() {
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tighter mb-6">
             <span className="block">Hello, I&apos;m</span>
             <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-teal-400 bg-clip-text text-transparent pb-4">
-              Sarthak Negi.
+              Sarthak Negi
             </div>
           </h1>
 

@@ -32,7 +32,7 @@ export default function About() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
-          <h3 className="text-2xl font-semibold mb-6">Who I Am</h3>
+          <h3 className="text-2xl font-semibold mb-6">Who I Am?</h3>
 
           <p className="text-gray-600 dark:text-gray-400 mb-6">
             As a dedicated professional, I am currently a Research Software

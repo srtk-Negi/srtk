@@ -61,7 +61,7 @@ export default function Resume() {
               >
                 <div className="absolute -left-[4px] top-0 w-2 h-2 bg-black dark:bg-white"></div>
 
-                <h4 className="text-xl font-semibold">{exp.role}</h4>
+                <h4 className="text-xl font-semibold"> {exp.role}</h4>
 
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-2 text-sm text-gray-600 dark:text-gray-400">
                   <div className="flex items-center">

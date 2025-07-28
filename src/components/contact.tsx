@@ -60,7 +60,7 @@ export default function Contact() {
         <h2 className="text-3xl font-bold tracking-tighter mb-3">Contact</h2>
         <Separator className="w-12 h-1 bg-black dark:bg-white" />
         <p className="mt-6 text-gray-600 dark:text-gray-400 max-w-2xl">
-          Have a question or want to work together? Feel free to reach out.
+          Have a question or want to work together? Feel free to reach out!
         </p>
       </div>
 
