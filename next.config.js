@@ -18,10 +18,8 @@ const nextConfig = {
       },
     ],
   },
-  webpack: (config) => {
-    config.resolve.alias["@"] = path.resolve(__dirname, "src");
-    return config;
-  },
+  // Remove the custom webpack config since Next.js handles @ alias natively
+  // when you have a tsconfig.json or jsconfig.json configured properly
 };
 
 export default nextConfig;
