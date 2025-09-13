@@ -2,17 +2,51 @@ import Link from "next/link";
 import { ExternalLink, Github } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent } from "@/components/ui/card";
-import assetUrls from "@/app/assetUrls";
 import LiquidGlassButton from "@/components/LiquidGlassButton";
+import { Button } from "@/components/ui/button";
 
 export default function Projects() {
   const projects = [
     {
       id: 1,
+      title: "Kubera",
+      description: "An opinionated finance management tool 💰",
+      tags: ["Next.js", "React", "TypeScript", "PostgreSQL", "Vercel"],
+      liveUrl: "https://kubera.srtk.dev/",
+      githubUrl: null,
+    },
+    {
+      id: 2,
+      title: "LayNote",
+      description:
+        "LayNote provides users with a curated list of activities and points of interest tailored to their layover location and time.",
+      tags: ["React", "TypeScript", "FastAPI", "Ollama", "MySQL"],
+      liveUrl: null,
+      githubUrl: "https://github.com/srtk-Negi/LayNote",
+    },
+    {
+      id: 3,
+      title: "PixelPulse",
+      description:
+        "PixelPulse is an online shopping site for purchasing PCs and related accessories. This project involved developing an online shopping website with a focus on an intuitive interface and user-friendly features. The website includes many features both on the Admin and User sides of the webpage. On the User side, you get features such as the ability to purchase individual parts for your PC, hone your searches for different products with filters, and receive detailed information on the orders that you place. On the Admin side, you have the ability to edit user information, create or edit products, review detailed order information, and much more. ",
+      tags: ["React", "Node.js", "FastAPI", "PostgreSQL", "AWS RDS", "AWS S3"],
+      liveUrl: null,
+      githubUrl: "https://github.com/srtk-Negi/PixelPulse",
+    },
+    {
+      id: 4,
+      title: "srtk.dev",
+      description:
+        "This is my personal portfolio website, built with Next.js and Tailwind CSS. It showcases my projects, skills, and experience in a clean and modern design.",
+      tags: ["Next.js", "Tailwind CSS", "TypeScript", "React"],
+      liveUrl: "https://srtk.dev/",
+      githubUrl: "https://github.com/srtk-Negi/srtk",
+    },
+    {
+      id: 5,
       title: "Guardian Wheels",
       description:
         "Guardian Wheels -An advanced car alarm system that uses AI to recognize when a burglary is in progress. Images (via internal dashcam and drone) and geo info are sent to the user and the police.",
-      image: assetUrls.GWheels,
       tags: [
         "Python",
         "FastAPI",
@@ -26,52 +60,19 @@ export default function Projects() {
       githubUrl: "https://github.com/srtk-Negi/Guardian-Wheels",
     },
     {
-      id: 2,
-      title: "LayNote",
-      description:
-        "LayNote provides users with a curated list of activities and points of interest tailored to their layover location and time.",
-      image: assetUrls.defaultProj,
-      tags: ["React", "TypeScript", "FastAPI", "Ollama", "MySQL"],
-      liveUrl: null,
-      githubUrl: "https://github.com/srtk-Negi/LayNote",
-    },
-    {
-      id: 3,
-      title: "PixelPulse",
-      description:
-        "PixelPulse is an online shopping site for purchasing PCs and related accessories. This project involved developing an online shopping website with a focus on an intuitive interface and user-friendly features. The website includes many features both on the Admin and User sides of the webpage. On the User side, you get features such as the ability to purchase individual parts for your PC, hone your searches for different products with filters, and receive detailed information on the orders that you place. On the Admin side, you have the ability to edit user information, create or edit products, review detailed order information, and much more. ",
-
-      image: assetUrls.pixelpulse,
-      tags: ["React", "Node.js", "FastAPI", "Postgresql", "AWS RDS", "AWS S3"],
-      liveUrl: null,
-      githubUrl: "https://github.com/srtk-Negi/PixelPulse",
-    },
-    {
-      id: 4,
-      title: "srtk.dev",
-      description:
-        "This is my personal portfolio website, built with Next.js and Tailwind CSS. It showcases my projects, skills, and experience in a clean and modern design.",
-      image: assetUrls.portfolio,
-      tags: ["Next.js", "Tailwind CSS", "TypeScript", "React"],
-      liveUrl: "https://srtk.dev/",
-      githubUrl: "https://github.com/srtk-Negi/srtk",
-    },
-    {
-      id: 5,
+      id: 6,
       title: "Comment Sentiment Analysis",
       description:
         "Fetches all the comments from a youtube video and performs sentiment analysis.Uses the YouTube API to get all the comments from the video the link was provided for. Uses the OpenAI API to access ChatGPT to perform sentiment analysis.",
-      image: assetUrls.defaultProj,
       tags: ["Python", "OpenAI API", "YouTube API"],
       liveUrl: null,
       githubUrl: "https://github.com/srtk-Negi/commentalyzer",
     },
     {
-      id: 6,
+      id: 7,
       title: "CryptDiary",
       description:
         "SecureDiary is a simple command-line tool to securely create and retrieve encrypted text entries (like diary entries). Each entry is AES-GCM encrypted using a password and saved as a .json file, ensuring confidentiality and integrity.",
-      image: assetUrls.defaultProj,
       tags: ["Python", "Cryptography", "AES-GCM", "Command Line"],
       liveUrl: null,
       githubUrl: "https://github.com/srtk-Negi/CryptDiary",
@@ -95,15 +96,6 @@ export default function Projects() {
             key={project.id}
             className="border-grey rounded-5 overflow-hidden bg-transparent shadow-5 transition-transform hover:-translate-y-1"
           >
-            {/* <div className="relative h-64 w-full bg-gray-100 dark:bg-neutral-900">
-              <Image
-                src={project.image}
-                alt={assetUrls.defaultProj}
-                fill
-                className="object-cover"
-              />
-            </div> */}
-
             <CardContent className="p-4">
               <h3 className="text-xl font-bold mb-2">{project.title}</h3>
 
@@ -127,17 +119,25 @@ export default function Projects() {
                   <Link
                     href={project.liveUrl}
                     className="flex items-center text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 font-medium"
+                    target="_blank"
                   >
-                    <ExternalLink size={16} className="mr-1" /> View Project
+                    <Button variant={"secondary"}>
+                      <ExternalLink size={16} className="mr-1" /> View Project
+                    </Button>
                   </Link>
                 )}
 
-                <Link
-                  href={project.githubUrl}
-                  className="flex items-center text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 font-medium"
-                >
-                  <Github size={16} className="mr-1" /> Source Code
-                </Link>
+                {project.githubUrl && (
+                  <Link
+                    href={project.githubUrl}
+                    className="flex items-center text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 font-medium"
+                    target="_blank"
+                  >
+                    <Button variant={"secondary"}>
+                      <Github size={16} className="mr-1" /> Source Code
+                    </Button>
+                  </Link>
+                )}
               </div>
             </CardContent>
           </Card>
