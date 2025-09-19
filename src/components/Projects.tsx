@@ -44,6 +44,15 @@ export default function Projects() {
     },
     {
       id: 5,
+      title: "Brick",
+      description:
+        "A production-ready SaaS starter kit that handles authentication, billing, multi-tenancy, RBAC, and team collaboration — so you can focus on building your product, not boilerplate.",
+      tags: ["Next.js", "React", "TypeScript", "PostgreSQL", "Authjs"],
+      liveUrl: null,
+      githubUrl: "https://github.com/srtk-Negi/brick",
+    },
+    {
+      id: 6,
       title: "Guardian Wheels",
       description:
         "Guardian Wheels -An advanced car alarm system that uses AI to recognize when a burglary is in progress. Images (via internal dashcam and drone) and geo info are sent to the user and the police.",
@@ -60,7 +69,7 @@ export default function Projects() {
       githubUrl: "https://github.com/srtk-Negi/Guardian-Wheels",
     },
     {
-      id: 6,
+      id: 7,
       title: "Comment Sentiment Analysis",
       description:
         "Fetches all the comments from a youtube video and performs sentiment analysis.Uses the YouTube API to get all the comments from the video the link was provided for. Uses the OpenAI API to access ChatGPT to perform sentiment analysis.",
@@ -69,7 +78,7 @@ export default function Projects() {
       githubUrl: "https://github.com/srtk-Negi/commentalyzer",
     },
     {
-      id: 7,
+      id: 8,
       title: "CryptDiary",
       description:
         "SecureDiary is a simple command-line tool to securely create and retrieve encrypted text entries (like diary entries). Each entry is AES-GCM encrypted using a password and saved as a .json file, ensuring confidentiality and integrity.",
