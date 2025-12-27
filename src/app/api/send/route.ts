@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
   }
   try {
     const { data, error } = await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "Sarthak Negi <contact@srtk.dev>",
       to: "srnegi141@gmail.com",
       subject: formData.subject,
       react: EmailTemplate({
