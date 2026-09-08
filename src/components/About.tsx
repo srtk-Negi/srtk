@@ -1,28 +1,8 @@
 import { Code, Briefcase, GraduationCap } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { skills } from "@/config";
 
 export default function About() {
-  const skills = [
-    { name: "TypeScript", level: 85, isLanguage: true },
-    { name: "React", level: 90, isLanguage: false },
-    { name: "Python", level: 75, isLanguage: true },
-    { name: "FastAPI", level: 70, isLanguage: false },
-    { name: "SQL", level: 80, isLanguage: true },
-    { name: "Next.js", level: 85, isLanguage: false },
-    { name: "Java", level: 80, isLanguage: true },
-    { name: "C", level: 80, isLanguage: true },
-    { name: "Springboot", level: 80, isLanguage: true },
-    { name: "Supabase", level: 80, isLanguage: false },
-    { name: "Tailwind CSS", level: 80, isLanguage: false },
-    { name: "Docker", level: 70, isLanguage: false },
-    { name: "Selenium", level: 60, isLanguage: false },
-    { name: "AWS", level: 70, isLanguage: false },
-    { name: "PostgreSQL", level: 75, isLanguage: false },
-    { name: "MySQL", level: 75, isLanguage: false },
-    { name: "GraphQL", level: 65, isLanguage: false },
-    { name: "Much More...", level: 65, isLanguage: false },
-  ];
-
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="mb-16">
@@ -108,10 +88,10 @@ export default function About() {
           <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
             {skills.map((skill) => (
               <div
-                key={skill.name}
+                key={skill}
                 className="border border-gray-200 dark:border-neutral-800 px-3 py-2 text-center text-sm hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors rounded-lg"
               >
-                {skill.name}
+                {skill}
               </div>
             ))}
           </div>

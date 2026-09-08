@@ -1,15 +1,10 @@
 import Link from "next/link";
-import ParticleAnimation from "@/components/ParticleAnimation";
 import TypingEffect from "@/components/TypingEffect";
 import LiquidGlassButton from "@/components/LiquidGlassButton";
 
 export default function Hero() {
   return (
     <div className="relative min-h-screen">
-      <div className="absolute inset-0 z-0">
-        <ParticleAnimation />
-      </div>
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center min-h-screen pt-16 relative z-10">
         <div className="max-w-3xl">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tighter mb-6">

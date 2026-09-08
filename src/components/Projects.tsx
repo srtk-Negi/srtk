@@ -1,93 +1,13 @@
 import Link from "next/link";
-import { ExternalLink, Github } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent } from "@/components/ui/card";
 import LiquidGlassButton from "@/components/LiquidGlassButton";
-import { Button } from "@/components/ui/button";
+import { contactInfo, projects } from "@/config";
+
+const MAX_VISIBLE_TAGS = 3;
 
 export default function Projects() {
-  const projects = [
-    {
-      id: 1,
-      title: "Kubera",
-      description: "An opinionated finance management tool 💰",
-      tags: ["Next.js", "React", "TypeScript", "PostgreSQL", "Vercel"],
-      liveUrl: "https://kubera.srtk.dev/",
-      githubUrl: null,
-    },
-    {
-      id: 2,
-      title: "LayNote",
-      description:
-        "LayNote provides users with a curated list of activities and points of interest tailored to their layover location and time.",
-      tags: ["React", "TypeScript", "FastAPI", "Ollama", "MySQL"],
-      liveUrl: null,
-      githubUrl: "https://github.com/srtk-Negi/LayNote",
-    },
-    {
-      id: 3,
-      title: "PixelPulse",
-      description:
-        "PixelPulse is an online shopping site for purchasing PCs and related accessories. This project involved developing an online shopping website with a focus on an intuitive interface and user-friendly features. The website includes many features both on the Admin and User sides of the webpage. On the User side, you get features such as the ability to purchase individual parts for your PC, hone your searches for different products with filters, and receive detailed information on the orders that you place. On the Admin side, you have the ability to edit user information, create or edit products, review detailed order information, and much more. ",
-      tags: ["React", "Node.js", "FastAPI", "PostgreSQL", "AWS RDS", "AWS S3"],
-      liveUrl: null,
-      githubUrl: "https://github.com/srtk-Negi/PixelPulse",
-    },
-    {
-      id: 4,
-      title: "srtk.dev",
-      description:
-        "This is my personal portfolio website, built with Next.js and Tailwind CSS. It showcases my projects, skills, and experience in a clean and modern design.",
-      tags: ["Next.js", "Tailwind CSS", "TypeScript", "React"],
-      liveUrl: "https://srtk.dev/",
-      githubUrl: "https://github.com/srtk-Negi/srtk",
-    },
-    {
-      id: 5,
-      title: "Brick",
-      description:
-        "A production-ready SaaS starter kit that handles authentication, billing, multi-tenancy, RBAC, and team collaboration — so you can focus on building your product, not boilerplate.",
-      tags: ["Next.js", "React", "TypeScript", "PostgreSQL", "Authjs"],
-      liveUrl: null,
-      githubUrl: "https://github.com/srtk-Negi/brick",
-    },
-    {
-      id: 6,
-      title: "Guardian Wheels",
-      description:
-        "Guardian Wheels -An advanced car alarm system that uses AI to recognize when a burglary is in progress. Images (via internal dashcam and drone) and geo info are sent to the user and the police.",
-      tags: [
-        "Python",
-        "FastAPI",
-        "JavaScript",
-        "Twilio",
-        "Arduino",
-        "AWS",
-        "MySQL",
-      ],
-      liveUrl: null,
-      githubUrl: "https://github.com/srtk-Negi/Guardian-Wheels",
-    },
-    {
-      id: 7,
-      title: "Comment Sentiment Analysis",
-      description:
-        "Fetches all the comments from a youtube video and performs sentiment analysis.Uses the YouTube API to get all the comments from the video the link was provided for. Uses the OpenAI API to access ChatGPT to perform sentiment analysis.",
-      tags: ["Python", "OpenAI API", "YouTube API"],
-      liveUrl: null,
-      githubUrl: "https://github.com/srtk-Negi/commentalyzer",
-    },
-    {
-      id: 8,
-      title: "CryptDiary",
-      description:
-        "SecureDiary is a simple command-line tool to securely create and retrieve encrypted text entries (like diary entries). Each entry is AES-GCM encrypted using a password and saved as a .json file, ensuring confidentiality and integrity.",
-      tags: ["Python", "Cryptography", "AES-GCM", "Command Line"],
-      liveUrl: null,
-      githubUrl: "https://github.com/srtk-Negi/CryptDiary",
-    },
-  ];
-
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="mb-16">
@@ -95,67 +15,56 @@ export default function Projects() {
         <Separator className="w-12 h-1 bg-black dark:bg-white" />
         <p className="mt-6 text-gray-600 dark:text-gray-400 max-w-2xl">
           A selection of my recent work. Each project represents my commitment
-          to clean design and efficient functionality.
+          to clean design and efficient functionality. Click a card to learn
+          more.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
-          <Card
-            key={project.id}
-            className="border-grey rounded-5 overflow-hidden bg-transparent shadow-5 transition-transform hover:-translate-y-1"
+          <Link
+            key={project.slug}
+            href={`/projects/${project.slug}`}
+            className="group block h-full"
           >
-            <CardContent className="p-4">
-              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+            <Card className="h-full border-grey rounded-5 overflow-hidden bg-transparent shadow-5 transition-all group-hover:-translate-y-1 group-hover:shadow-md">
+              <CardContent className="p-4 flex flex-col h-full">
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-lg font-bold">{project.title}</h3>
+                  <ArrowUpRight
+                    size={18}
+                    className="shrink-0 mt-1 text-gray-400 transition-all group-hover:text-black dark:group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  />
+                </div>
 
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                {project.description}
-              </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
+                  {project.description}
+                </p>
 
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="border border-gray-200 dark:border-neutral-800 px-2 py-1 text-xs"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex space-x-4">
-                {project.liveUrl && (
-                  <Link
-                    href={project.liveUrl}
-                    className="flex items-center text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 font-medium"
-                    target="_blank"
-                  >
-                    <Button variant={"secondary"}>
-                      <ExternalLink size={16} className="mr-1" /> View Project
-                    </Button>
-                  </Link>
-                )}
-
-                {project.githubUrl && (
-                  <Link
-                    href={project.githubUrl}
-                    className="flex items-center text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 font-medium"
-                    target="_blank"
-                  >
-                    <Button variant={"secondary"}>
-                      <Github size={16} className="mr-1" /> Source Code
-                    </Button>
-                  </Link>
-                )}
-              </div>
-            </CardContent>
-          </Card>
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {project.tags.slice(0, MAX_VISIBLE_TAGS).map((tag) => (
+                    <span
+                      key={tag}
+                      className="border border-gray-200 dark:border-neutral-800 px-2 py-1 text-xs"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                  {project.tags.length > MAX_VISIBLE_TAGS && (
+                    <span className="px-2 py-1 text-xs text-gray-500 dark:text-gray-400">
+                      +{project.tags.length - MAX_VISIBLE_TAGS} more
+                    </span>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          </Link>
         ))}
       </div>
 
       <div className="text-center mt-16">
         <Link
-          href="https://github.com/srtk-Negi"
+          href={contactInfo.socialLinks.github}
           target="_blank"
           rel="noopener noreferrer"
         >

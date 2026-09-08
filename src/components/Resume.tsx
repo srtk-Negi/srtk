@@ -1,42 +1,10 @@
 import { Calendar, MapPin, Building, GraduationCap } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import assetUrls from "@/app/assetUrls";
+import { assetUrls } from "@/config";
 import LiquidGlassButton from "@/components/LiquidGlassButton";
+import { experiences, education } from "@/config";
 
 export default function Resume() {
-  const experiences = [
-    {
-      id: 1,
-      role: "Research Software Developer II",
-      company: "The Data Analytics Center, UTSA",
-      location: "San Antonio, TX",
-      period: "Jan 2025 - Present",
-      description:
-        "In my role as a Research Software Developer II, I have gained extensive practical experience in developing sophisticated software solutions. My contributions include designing and implementing modular AI chat UIs, architecting scalable PostgreSQL and MSSQL schemas, integrating vector databases for retrieval-augmented generation (RAG) in production pipelines, and developing robust role- and group-based access control systems. I have also led interviews for graduate hires and mentored new contributors in backend and DevOps. My skills encompass full-stack development, utilizing technologies such as React, FastAPI, and PostgreSQL, and I am adept at leveraging data-driven insights to optimize content strategy and enhance audience engagement",
-    },
-    {
-      id: 2,
-      role: "Undergrad Researcher",
-      company: "The Data Analytics Center, UTSA",
-      location: "San Antonio, TX",
-      period: "March 2023 - Dec 2024",
-      description:
-        "As an Undergrad Researcher at The Data Analytics Center, UTSA, I significantly contributed to various projects. I developed and published an internal Python package, complete with over 50 unit tests and 100% code coverage, which demonstrably boosted developer productivity by 50%. To enhance data processing efficiency, I implemented a CUDA-based parallel data processing queue that reduced query and analysis time by 75%. I also created an LDAP microservice, centralizing user data across internal services and improving authentication and user management. My work also included co-developing a full-stack analytics dashboard using React, FastAPI, and MSSQL Server, and building more than 12 robust scrapers and parsers for ingesting research data from over 5 diverse sources.",
-    },
-  ];
-
-  const education = [
-    {
-      id: 1,
-      degree: "Bachelor of Science in Computer Science",
-      institution: "The University of Texas at San Antonio",
-      location: "San Antonio, TX",
-      period: "2021 - 2024",
-      description:
-        "I earned my Bachelor of Science in Computer Science from The University of Texas at San Antonio, graduating in December 2024. My studies focused on a dual concentration in Software Engineering and Data Science. I maintained a strong academic record with a GPA of 3.86 overall and a 3.97 in my major coursework. My achievements were recognized through the Distinguished Presidential Scholarship, President's List, and Honor Roll. My relevant coursework provided a comprehensive understanding of critical areas, including Data Structures, Systems Programming, Analysis of Algorithms, Application Programming, Data Science, AI, Computer Organization, Database Systems, Software Engineering, and Secure Software Development.",
-    },
-  ];
-
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="mb-16">

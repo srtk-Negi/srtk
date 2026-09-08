@@ -5,9 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import assetUrls from "@/app/assetUrls";
 
-const inter = Inter({ subsets: ["latin"] });
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space-grotesk",
@@ -16,9 +14,6 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Sarthak Negi | Portfolio",
   description: "Personal portfolio showcasing my projects and skills",
-  icons: {
-    icon: assetUrls.avatar,
-  },
 };
 
 export default function RootLayout({

@@ -2,13 +2,13 @@
 
 import type React from "react";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, MapPin, Send, Linkedin, Github, Twitter } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import LiquidGlassButton from "@/components/LiquidGlassButton";
-import { contactInfo } from "@/components/Footer";
+import { contactInfo } from "@/config";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -89,21 +89,6 @@ export default function Contact() {
 
             <div className="flex items-start space-x-4">
               <div className="p-2 border border-gray-200 dark:border-neutral-800">
-                <Phone className="h-5 w-5" />
-              </div>
-              <div>
-                <h4 className="font-semibold">Phone</h4>
-                <a
-                  href="tel:+11234567890"
-                  className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
-                >
-                  {contactInfo.phone}
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="p-2 border border-gray-200 dark:border-neutral-800">
                 <MapPin className="h-5 w-5" />
               </div>
               <div>
@@ -111,6 +96,52 @@ export default function Contact() {
                 <p className="text-gray-600 dark:text-gray-400">
                   {contactInfo.location}
                 </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="p-2 border border-gray-200 dark:border-neutral-800">
+                <Github className="h-5 w-5" />
+              </div>
+              <div>
+                <h4 className="font-semibold">Github</h4>
+                <a
+                  target="_blank"
+                  href={contactInfo.socialLinks.github}
+                  className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                >
+                  {contactInfo.socialLinks.github}
+                </a>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="p-2 border border-gray-200 dark:border-neutral-800">
+                <Linkedin className="h-5 w-5" />
+              </div>
+              <div>
+                <h4 className="font-semibold">LinkedIn</h4>
+                <a
+                  target="_blank"
+                  href={contactInfo.socialLinks.linkedin}
+                  className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                >
+                  {contactInfo.socialLinks.linkedin}
+                </a>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="p-2 border border-gray-200 dark:border-neutral-800">
+                <Twitter className="h-5 w-5" />
+              </div>
+              <div>
+                <h4 className="font-semibold">X</h4>
+                <a
+                  target="_blank"
+                  href={contactInfo.socialLinks.twitter}
+                  className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                >
+                  {contactInfo.socialLinks.twitter}
+                </a>
               </div>
             </div>
           </CardContent>
