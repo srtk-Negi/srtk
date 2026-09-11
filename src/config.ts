@@ -16,7 +16,7 @@ export const assetUrls = {
   sadMan:
     "https://2c7eswxxwk.ufs.sh/f/2osH2RhSI3NmvmpB9l6l86j4KDZtedMuXf3RUx0Lir7aqIpO",
   resume:
-    "https://2c7eswxxwk.ufs.sh/f/2osH2RhSI3Nm02chB8Ul9dAoiwvhO6nV34SLIG71tgfWekJx",
+    "https://2c7eswxxwk.ufs.sh/f/2osH2RhSI3NmLQaXzwMbOAINTs7zvkUMSpWjc5nQd3RGqCEB",
 };
 
 export const experiences = [
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     githubUrl: [
       {
         label: "Brick",
-        url: "https://github.com/srtk-Negi/brick",
+        url: "https://github.com/s4arthakk/brick",
       },
     ],
   },
@@ -161,7 +161,7 @@ export const projects: Project[] = [
     githubUrl: [
       {
         label: "LayNote",
-        url: "https://github.com/srtk-Negi/LayNote",
+        url: "https://github.com/s4arthakk/LayNote",
       },
     ],
   },
@@ -175,7 +175,7 @@ export const projects: Project[] = [
     githubUrl: [
       {
         label: "PixelPulse",
-        url: "https://github.com/srtk-Negi/PixelPulse",
+        url: "https://github.com/s4arthakk/PixelPulse",
       },
     ],
   },
@@ -194,7 +194,7 @@ export const projects: Project[] = [
     githubUrl: [
       {
         label: "srtk",
-        url: "https://github.com/srtk-Negi/srtk",
+        url: "https://github.com/s4arthakk/srtk",
       },
     ],
   },
@@ -216,7 +216,7 @@ export const projects: Project[] = [
     githubUrl: [
       {
         label: "Guardian Wheels",
-        url: "https://github.com/srtk-Negi/Guardian-Wheels",
+        url: "https://github.com/s4arthakk/Guardian-Wheels",
       },
     ],
   },
@@ -226,7 +226,7 @@ export const contactInfo = {
   email: "contact@srtk.dev",
   location: "San Antonio, TX, USA",
   socialLinks: {
-    github: "https://github.com/srtk-Negi",
+    github: "https://github.com/s4arthakk",
     linkedin: "https://www.linkedin.com/in/sarthak-negi-98301b1b7/",
     twitter: "https://x.com/s4arthakk",
   },
